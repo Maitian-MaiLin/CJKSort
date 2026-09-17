@@ -23,6 +23,7 @@ Provides multiple methods for sorting Chinese characters for categories. Provide
 - You are done!
 
 ## Configuration
+
 You need to run `updateCollation.php --force` as an post-requisite for changing configuration.
 
 | Name | Description | Default |
@@ -34,10 +35,12 @@ You need to run `updateCollation.php --force` as an post-requisite for changing 
 | `$wgCJKSortnNoPrefix` | Automatically strip prefixes. For example, "Subproject:PageA" will be transformed to "PageA" during collation process. | `false` |
 
 ## Other uses
+
 You can insert `{{CJKSORT:<custom sortkey>}}` on the page. Custom sortkey will be formated by this extension and use it as the sortkey for the page (this is actually set `{{DEFAULTSORT}}`). When this extension is set to use incorrect pronunciations for multi-syllable characters in certain contexts.
 
 You can enclose the parts that should not be formatted within square brackets. For example, `{{CJKSORT:tian1shi3[92]}}`. Although you probably won't use it at all.
 
 ## License
+
 - Code licensed under 2-Clause BSD License.
   - Text files of Unihan licensed under Unicode License, version 3; See <https://www.unicode.org/Public/UCD/latest/ucd/Unihan.zip> for details.
