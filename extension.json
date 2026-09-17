@@ -43,7 +43,6 @@
 	},
 	"Hooks": {
 		"Collation::factory": "collationFactory",
-		"CollationFactory::register": "CJKSort\\Hooks::onCollationFactoryRegister",
 		"ParserFirstCallInit": "CJKSort\\CJKSORT::onParserFirstCallInit"
 	},
 	"ExtensionMessagesFiles": {
