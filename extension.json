@@ -1,0 +1,53 @@
+{
+	"name": "CJKSort",
+	"author": [
+		"Maitian MaiLin",
+		"Gary Guo",
+		"Func",
+		"Qiuwen Baike Contributors"
+	],
+	"url": "https://github.com/Maitian-MaiLin/CJKSort",
+	"descriptionmsg": "cjksort-desc",
+	"version": "1.0.0",
+	"license-name": "BSD-2-Clause",
+	"type": "other",
+	"MessagesDirs": {
+		"CJKSort": [
+			"i18n"
+		]
+	},
+	"config": {
+		"CJKSortAutoFallback": {
+			"value": true
+		},
+		"CJKSortWithTone": {
+			"value": false
+		},
+		"CJKSortWithNumericSorting": {
+			"value": false
+		},
+		"CJKSortWithNumericHanChr": {
+			"value": false
+		},
+		"CJKSortNoPrefix": {
+			"value": false
+		}
+	},
+	"AutoloadNamespaces": {
+		"CJKSort\\": "includes/"
+	},
+	"HookHandlers": {
+		"collationFactory": {
+			"class": "CJKSort\\CollationFactoryHandler"
+		}
+	},
+	"Hooks": {
+		"Collation::factory": "collationFactory",
+		"CollationFactory::register": "CJKSort\\Hooks::onCollationFactoryRegister",
+		"ParserFirstCallInit": "CJKSort\\CJKSORT::onParserFirstCallInit"
+	},
+	"ExtensionMessagesFiles": {
+		"CJKSortMagic": "includes/CJKSORT.magic.php"
+	},
+	"manifest_version": 2
+}
