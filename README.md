@@ -14,6 +14,8 @@ Provides multiple methods for sorting Chinese characters for categories. Provide
 - `kangxi` Kangxi Radicals (radical → stroke number → Unicode code point)
 - `vietnamese` Vietnamese (beta? I haven't figured out yet how to use it with `uca-vi`)
 
+Data comes from Unihan.
+
 ## Install
 
 - Clone the respository, rename it to `CJKSort` and copy to extensions folder.
